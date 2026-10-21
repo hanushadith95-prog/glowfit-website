@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section class="flex justify-center mt-5">
+        <!--Navbar-->
+        <nav
+            class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3">
+            <a href="index.html" class="shrink-0">
+                <img src="images/logo-navbar.png" alt="WellLife logo" class="h-10 w-10 object-contain">
+            </a>
+            <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
+            <ul class="flex gap-5 items-center">
+                <li class="nav-link">Home</li>
+                <li class="nav-link">Workout</li>
+                <li class="nav-link">Nutrition</li>
+                <li class="nav-link">Quiz</li>
+                <li class="nav-link">Progress</li>
+                <li class="nav-link">Community</li>
+            </ul>
+            <i class="nav-link fa-solid fa-magnifying-glass "></i>
+            <i class="nav-link fa-solid fa-user"></i>
+            <button id="menuBtn" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <ul id="menu"
+                class="hidden md:hidden absolute right-0 top-full w-full flex-col gap-3 text-orange-500 text-right px-4 pb-4 z-50">
+                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="index.html">Home</a>
+                </li>
+                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Workout</a></li>
+                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Nutrition</a></li>
+                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Quiz</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <!--Hero-->
+        <div class="heroSection">
+            <div class="banner_img">
+                <img src="./images/banner.jpg" alt="yoga">
+            </div>
+        </div>
+        <div class="title">
+            <h1 class="heroSection__heading">Your Wellness,<br><span class="heroSection__heading1">Your Life</span>
+            </h1>
+            <p>Simple Workouts,healthy meal,smart tools</p>
+            <p>and personalised plans,all in one place.</p>
+            <button class="btn">Start Your Journey <i class="fa-solid fa-arrow-right w-12"></i></button>
+        </div>
+    </section>
+    <section>
+        <!--wellness journey-->
+        <div class="journey__content">
+            <p style="color: #304332;">YOUR WELLNESS JOURNEY</p>
+            <h1>Find Your Balance</h1>
+            <p style="color: #304332;">Small steps toward a healthier, happier you.</p>
+        </div>
+        <div class="cards">
+            <div class="image-row">
+                <div>
+                    <img src="./images/workout.jpg">
+                </div>
+                <p class="font-bold">Move Your Body</p>
+                <p class="text-gray-500">Discover workouts that fit your routine.</p>
+                <p style="color: #f97316;">Explore Workouts <i class="fa-solid fa-arrow-right w-12"></i></p>
+            </div>
+            <div class="image-row">
+                <div>
+                    <img src="./images/yoga.jpg">
+                </div>
+                <p class="font-bold">Find Your Calm</p>
+                <p class="text-gray-500">Relax, stretch, and reconnect with yourself.</p>
+                <p style="color: #f97316;">Explore Yoga <i class="fa-solid fa-arrow-right w-12"></i></p>
+            </div>
+            <div class="image-row">
+                <div>
+                    <img src="./images/diet.jpg">
+                </div>
+                <p class="font-bold">Eat Better</p>
+                <p class="text-gray-500">Explore balanced meals and nutrition tips.</p>
+                <p style="color: #f97316;">Explore Nutrition <i class="fa-solid fa-arrow-right w-12"></i></p>
+            </div>
+            <div class="image-row">
+                <div>
+                    <img src="./images/quiz.jpg">
+                </div>
+                <p class="font-bold">Know Yourself</p>
+                <p class="text-gray-500">Take fun quizzes to learn about your habits.</p>
+                <p style="color: #f97316;">Take a Quiz <i class="fa-solid fa-arrow-right w-12"></i></p>
+            </div>
+        </div>
+    </section>
+    <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+
+    </script>
+</body>
+
+</html>
