@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Dashboard</title>
+    <script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js
+"></script>
+</head>
+<body>
+    <!-- Heading -->
+    <section id="progress">
+        <h1>Your Progress</h1>
+        <p>Track your journey.Celebrate your wins!</p>
+        <div>
+            <div>
+                <h2 >Workouts</h2>
+                <p id="workoutvalue"></p>
+                <p>This week</p>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Bar chart -->
+     <div class="container" style="height: 500px; width:80%;" >
+        <canvas id="mychart"></canvas> 
+    </div>    
+    <input type="text" placeholder="" id="mon">
+    <script>
+        let mychart=document.getElementById('mychart').getContext('2d')
+        let barchart=new Chart(mychart,{
+            type:'bar',
+            data:{
+                labels:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+                datasets:[{
+                    label:'Weekly Report',
+                    data:[
+                        50,
+                        63,
+                        75,
+                        90,
+                        98,
+                        92,
+                        85
+                    ]
+                }]
+            },
+            options:{}
+        })
+      </script>
+</body>
+</html>
