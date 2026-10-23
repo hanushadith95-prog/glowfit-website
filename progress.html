@@ -73,9 +73,9 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
      <section class="mt-5 relative">
         <h1 style="color: #f97316; " class="font-bold text-center text-3xl mb-2">Your Progress</h1>
         <p style="color: #304332; font-style: italic;" class="text-center text-lg">Track your journey.Celebrate your wins!</p>
-        <div class="flex justify-between px-10" id="progress">
+        <div class="flex justify-between mt-5 px-10" id="progress">
 
-        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:19%;" >
+        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:22%;" >
             <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
                 <img src="./images/gym.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
@@ -86,7 +86,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
             </div>
         </div>
-        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:19%;" >
+        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:22%;" >
             <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
                 <img src="./images/restaurant.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
@@ -97,7 +97,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
  
             </div>
         </div>
-        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:19%;" >
+        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:22%;" >
             <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
                 <img src="./images/mindset.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
@@ -108,7 +108,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
             </div>
         </div>
-        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:19%;" >
+        <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:22%;" >
             <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
                 <img src="./images/goal.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
@@ -122,11 +122,10 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
         
     </section>
-    
-
-    <section id="chart" class="flex mt-10" style="justify-content: space-around;">
+    <!-- Charts -->
+    <section id="chart" class="flex  w-full" style="margin-top:7%; justify-content: space-around; ">
         <!-- Bar chart -->
-     <div class="container1" style="height: 500px; width: 40%;" >
+     <div class="container1" style="padding: 20px; height:400px; width: 45%;" >
         <canvas id="mychart"></canvas> 
         <div class="mt-5 flex justify-center">
     <button   id="week">Weekly Report</button>
@@ -134,17 +133,17 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     </div>
     
     <!-- line chart -->
-     <div class="container2" style="height: 500px; width: 40%;" >
+     <div class="container2" style=" padding: 20px; height:400px; width: 45%;" >
         <canvas id="mychart1"></canvas> 
         <div class="mt-5 flex justify-center">
-    <button   id="weight">Weight Update</button>
+    <button  id="weight">Weight Update</button>
     </div> 
     </div>
     </section>
 
     <!-- Weekly update -->
      
-     <section class="p-5 " style="background-color: #FDF3E5; display: none; top:17%; right: 40%; border: #f974165d 2px solid; border-radius: 10px;" id="update">
+     <section class="p-5 mt-10" style="background-color: #FDF3E5; display: none; border: #f974165d 2px solid; border-radius: 10px;" id="update">
         <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weekly Report <span id="close" class="px-5 cursor-pointer">X</span></h1>
        
          <div class="form-container">
@@ -164,6 +163,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <button id="submit" class="btn">Submit</button>
   </div>
 
+  
+
   <!-- Table Output -->
   <div class="table-container" style=" width: 70%; margin-left: auto; margin-right: auto;" >
     <table style="background-color: white;">
@@ -178,6 +179,40 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </tr>
       </thead>
       <tbody id="tablebody"></tbody>
+    </table>
+  </div>
+     </section>
+     <!-- Weight update -->
+      <section class="p-5 " style="background-color: #FDF3E5; display: none; border: #f974165d 2px solid; border-radius: 10px;" id="weightupdate">
+        <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weight update <span id="close1" class="px-5 cursor-pointer">X</span></h1>
+       
+    <div class="weight-container" style="display: flex; flex-direction: column;">
+    <select id="weightweek" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2">
+      <option value="Week-1">Week-1</option>
+      <option value="Week-2">Week-2</option>
+      <option value="Week-3">Week-3</option>
+      <option value="Week-4">Week-4</option>
+    </select>
+
+    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="weightnum" placeholder="Your Weight" min="40">
+    <p id="weightresult" class="text-red-700"></p>
+   
+    <button id="submit1" class="btn">Submit</button>
+  </div>
+
+  
+
+  <!-- Table Output -->
+  <div class="table-container" style=" width: 70%; margin-left: auto; margin-right: auto;" >
+    <table style="background-color: white;">
+      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light" >
+        <tr >
+          <th>Week</th>
+           <th>Weight</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="weightbody"></tbody>
     </table>
   </div>
      </section>
@@ -225,7 +260,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 datasets:[{
                     label:'Monthly Report',
                     data:[
-                        
+                        0,0,0,0
                     ],
             
                     borderWidth:3,
@@ -250,7 +285,57 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             }
         })
    
-    //  To-do list
+    //  To-do list weight
+    document.getElementById('submit1').addEventListener('click', function() {
+    const week = document.getElementById('weightweek').value
+
+      
+      const weightnum = Number(document.getElementById('weightnum').value)
+      if (!Number.isInteger(weightnum) || weightnum<=0){
+            document.getElementById('weightresult').textContent="Enter a valid Weight"
+        }
+
+     const tbody = document.getElementById('weightbody')
+      const newRow = document.createElement('tr')
+
+      newRow.innerHTML = 
+      `
+        <td>${week}</td>
+        <td>${weightnum}</td>
+        <td><button class="del1">Delete</button></td>
+        `
+      tbody.appendChild(newRow)
+      const del=newRow.querySelector(".del1")
+      del.addEventListener("click",function(){
+        newRow.remove()
+        const weekMapping={
+        'Week-1':0,
+        'Week-2':1,
+        'Week-3':2,
+        'Week-4':3,
+        }
+       const weekIndex=weekMapping[week]
+      if(weekIndex!==undefined && typeof linechart!=='undefined'){
+        linechart.data.datasets[0].data[weekIndex]=0
+        linechart.update()
+      }         
+      })
+      const weekMapping={
+        'Week-1':0,
+        'Week-2':1,
+        'Week-3':2,
+        'Week-4':3,
+        }
+       const weekIndex=weekMapping[week]
+      if(weekIndex!==undefined && typeof linechart!=='undefined'){
+        linechart.data.datasets[0].data[weekIndex]=weightnum
+        linechart.update()
+      }    
+
+      
+    })
+    
+      //  To-do list
     document.getElementById('submit').addEventListener('click', function() {
     const day = document.getElementById('day').value
       const workoutInput =Number(document.getElementById('workout').value)
@@ -286,6 +371,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         'Saturday':6,
 
       }
+      
       const dayIndex=dayMapping[day]
       if(dayIndex!==undefined && typeof barchart!=='undefined'){
         barchart.data.datasets[0].data[dayIndex]=0
@@ -310,7 +396,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
       
     })
-    // Display
+    //Week  Display
     let week=document.getElementById("week")
     week.addEventListener("click",function(){
         let update=document.getElementById("update")
@@ -326,6 +412,24 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         update.style.display="none"
        
     })
+    // weight dispay
+     //Week  Display
+    let weight=document.getElementById("weight")
+    weight.addEventListener("click",function(){
+        let weightupdate=document.getElementById("weightupdate")
+        let body=document.querySelector("body")
+        weightupdate.style.display="block"
+         document.body.style.backgroundColor="#fdf3e5"
+        
+    })
+    let close1=document.getElementById("close1")
+    close1.addEventListener("click",function(){
+        let weightupdate=document.getElementById("weightupdate")
+        let body=document.querySelector("body")
+        weightupdate.style.display="none"
+       
+    })
+    
 
       </script>
 </body>
