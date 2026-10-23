@@ -1,0 +1,154 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fdf3e5;
+}
+.heading{
+    font-weight: bold;
+    font-size: 24px
+}
+.heading__1{
+    color: #f97316;
+}
+.navbar{
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nav-link {
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    padding: 4px 8px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+    border-color: #f97316;
+    background-color: #f97316;
+    color: white;
+}
+.heroSection{
+    margin: 40px auto;
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: 25%;
+    margin-left: 10%;
+}
+.headline{
+    font-weight: bold;
+}
+.title p{
+    color: #304332;
+}
+.banner img img {
+    width: 100vw;
+    height: auto;
+    display: block;
+  }
+.heroSection__heading{
+    font-weight: bold;
+    font-size: 50px;
+    color: #304332;
+}
+.heroSection__heading1{
+    color: #f97316; 
+}
+.btn{
+    background-color: #f97316;
+    color: white;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+.menu-bar{
+    display:none;
+} 
+#menuBtn {
+    display: none;
+}
+.hero__content p{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2px;
+}
+.icon{
+    margin-top: 60px;
+    color: #f97316;
+    font-size: large;
+    background-color: #efd2ac;
+}
+.journey__content{
+    text-align: center;
+}
+.journey__content h1{
+    color: #f97316;
+    font-size: 30px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    padding: 0 16px;
+  }
+.image-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+.image-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .image-row p {
+    font-size: 14px;
+    margin: 6px 0 0;
+  }
+@media screen and (max-width: 768px){
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+}
+.nav-link{
+    display: none;
+}
+ #menuBtn{
+    display: block;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+ }
+ .banner_img img{
+     width: 100%;
+ }
+ .title{
+     margin: 4%;
+ }
+ .heroSection__heading{
+     font-size: 20px;
+ }
+ .title p,.btn{
+     font-size: x-small;
+ }
+ .hero__content{
+    display: none;
+ }
+ .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 16px;
+  }
+  .title{
+    position: absolute;
+    top: 20%;
+    margin-left: 10%;
+}
+}
