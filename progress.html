@@ -18,7 +18,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: fdfbf7;">
+<body>
     <section class="flex justify-center mt-5">
         <!--Navbar-->
         <nav
@@ -122,27 +122,33 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
         
     </section>
-    <div class="mt-5 flex justify-center">
-    <button   id="week">Weekly Report</button>
-    </div>
+    
 
     <section id="chart" class="flex mt-10" style="justify-content: space-around;">
         <!-- Bar chart -->
      <div class="container1" style="height: 500px; width: 40%;" >
         <canvas id="mychart"></canvas> 
+        <div class="mt-5 flex justify-center">
+    <button   id="week">Weekly Report</button>
     </div> 
+    </div>
+    
     <!-- line chart -->
      <div class="container2" style="height: 500px; width: 40%;" >
         <canvas id="mychart1"></canvas> 
+        <div class="mt-5 flex justify-center">
+    <button   id="weight">Weight Update</button>
+    </div> 
     </div>
     </section>
 
     <!-- Weekly update -->
-     <section class="fixed" style="top: 50px; right: 40%; display: none;" id="update">
-        <h1 class="text-center">Weekly Report <span id="close">X</span></h1>
+     
+     <section class="p-5 " style="background-color: #FDF3E5; display: none; top:17%; right: 40%; border: #f974165d 2px solid; border-radius: 10px;" id="update">
+        <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weekly Report <span id="close" class="px-5 cursor-pointer">X</span></h1>
        
          <div class="form-container">
-    <select id="day">
+    <select id="day" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2">
       <option value="Sunday">Sunday</option>
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
@@ -152,22 +158,23 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       <option value="Saturday">Saturday</option>
     </select>
 
-    <input type="number" id="workout" placeholder="Workouts-20" min="0">
-    <input type="number" id="meals" placeholder="Meals-3" min="0">
-    <input type="number" id="quiz" placeholder="Quiz-100" min="0">
-    <button id="submit">Submit</button>
+    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="workout" placeholder="Workouts-20" min="0">
+    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="meals" placeholder="Meals-3" min="0">
+    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="quiz" placeholder="Quiz-100" min="0">
+    <button id="submit" class="btn">Submit</button>
   </div>
 
   <!-- Table Output -->
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
+  <div class="table-container" style=" width: 70%; margin-left: auto; margin-right: auto;" >
+    <table style="background-color: white;">
+      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light" >
+        <tr >
           <th>Day</th>
           <th>Workouts</th>
           <th>Meals</th>
           <th>Quiz</th>
           <th>Average</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody id="tablebody"></tbody>
@@ -191,15 +198,10 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 labels:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
                 datasets:[{
                     label:'Weekly Report',
-                    data:[
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
+                    data:[0,0,0,0,0,0,0],
+                    backgroundColor:'#F97316',
+                    borderWidth:1,
+                    borderColor:'#304332'
                 }]
             },
             options:{
@@ -224,7 +226,15 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                     label:'Monthly Report',
                     data:[
                         
-                    ]
+                    ],
+            
+                    borderWidth:3,
+                    borderColor:'#F97316',
+                    pointBackgroundColor:'#304332', // The inside fill color of the dot
+  pointBorderColor: '#F97316',             // The outer border color of the dot
+  pointBorderWidth: 1,                     // Thickness of the dot's border
+  pointRadius: 4
+                    
                 }]
             },
             options:{
@@ -259,8 +269,44 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         <td>${workoutPct.toFixed(1)}%</td>
         <td>${mealsPct.toFixed(1)}%</td>
         <td>${quizPct.toFixed(1)}%</td>
-        <td><strong>${avgPct.toFixed(1)}%</strong></td>`
+        <td><strong>${avgPct.toFixed(1)}%</strong></td>
+        <td><button class="del">Delete</button></td>
+        `
       tbody.appendChild(newRow)
+      const del=newRow.querySelector(".del")
+      del.addEventListener("click",function(){
+        newRow.remove()
+        const dayMapping={
+        'Sunday':0,
+        'Monday':1,
+        'Tueday':2,
+        'Wednesday':3,
+        'Thursday':4,
+        'Friday':5,
+        'Saturday':6,
+
+      }
+      const dayIndex=dayMapping[day]
+      if(dayIndex!==undefined && typeof barchart!=='undefined'){
+        barchart.data.datasets[0].data[dayIndex]=0
+        barchart.update()
+      }         
+      })
+      const dayMapping={
+        'Sunday':0,
+        'Monday':1,
+        'Tueday':2,
+        'Wednesday':3,
+        'Thursday':4,
+        'Friday':5,
+        'Saturday':6,
+
+      }
+      const dayIndex=dayMapping[day]
+      if(dayIndex!==undefined && typeof barchart!=='undefined'){
+        barchart.data.datasets[0].data[dayIndex]=Number(avgPct.toFixed(1))
+        barchart.update()
+      }
 
       
     })
@@ -270,15 +316,17 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         let update=document.getElementById("update")
         let body=document.querySelector("body")
         update.style.display="block"
-        body.style.backgroundColor=""
+         document.body.style.backgroundColor="#fdf3e5"
+        
     })
     let close=document.getElementById("close")
     close.addEventListener("click",function(){
         let update=document.getElementById("update")
         let body=document.querySelector("body")
         update.style.display="none"
-        body.style.backgroundColor=""
+       
     })
+
       </script>
 </body>
 </html>

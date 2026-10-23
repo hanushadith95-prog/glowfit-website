@@ -72,6 +72,30 @@ body {
     padding: 10px;
 
 }
+ #weight{
+    background-color: #f97316;
+    color: white;
+    border-radius: 30px;
+    
+    padding: 10px;
+
+}
+ .btn{
+    background-color: #f97316;
+    color: white;
+    border-radius: 30px;
+    
+    padding: 10px;
+
+}
+.del{
+  background-color: #f97316;
+    color: white;
+    border-radius: 30px;
+    
+    padding: 10px;
+
+}
     @media screen and (max-width: 768px){
 .navbar{
     display: flex;
