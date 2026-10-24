@@ -113,6 +113,12 @@ body {
     background: transparent;
     cursor: pointer;
  }
+ /* .container1,.container2{
+    
+        height:200px ;
+        
+    } 
+  */
    
     
 }
@@ -124,7 +130,7 @@ body {
     #progress{
       flex-wrap: wrap;
     }
-   #chart{
+   /* #chart{
       flex-direction: column;
       align-items: center;
       gap: 0;
@@ -132,13 +138,13 @@ body {
     
     }
     .container1,.container2{
-        width: 80% !important;
-        height:150px ;
+        width: 90% !important;
+        height:250px;
         
     } 
     .container2{
       margin-top:2%;
-    }
+    } */
 
 
  }

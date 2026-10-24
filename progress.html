@@ -122,32 +122,42 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
         
     </section>
-    <!-- Charts -->
-    <section id="chart" class="flex  w-full" style="margin-top:7%; justify-content: space-around; ">
-        <!-- Bar chart -->
-     <div class="container1" style="padding: 20px; height:400px; width: 45%;" >
-        <canvas id="mychart"></canvas> 
-        <div class="mt-5 flex justify-center">
-    <button   id="week">Weekly Report</button>
-    </div> 
+   <!-- Charts ection -->
+<section id="chart" class="flex flex-col md:flex-row w-full justify-around gap-8 mt-10 px-4 sm:px-8 ">
+  
+  <!-- Bar Chart -->
+  <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 shadow-md max-w-[700px] w-full min-h-[400px]" style="border: #f974165d 2px solid;">
+    <div class="w-full h-full">
+      <canvas id="mychart"></canvas>
     </div>
-    
-    <!-- line chart -->
-     <div class="container2" style=" padding: 20px; height:400px; width: 45%;" >
-        <canvas id="mychart1"></canvas> 
-        <div class="mt-5 flex justify-center">
-    <button  id="weight">Weight Update</button>
-    </div> 
+    <div class="mt-5 w-full flex justify-center">
+      <button id="week" class="px-6 py-2 bg-[#f97416] text-white font-semibold rounded-full hover:bg-[#e0630b] transition-colors shadow-sm">
+        Weekly Report
+      </button>
     </div>
-    </section>
+  </div>
 
+  <!-- Line Chart Card -->
+  <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 shadow-md max-w-[700px] w-full min-h-[400px]" style="border: #f974165d 2px solid;">
+    
+    <div class="w-full h-full"> 
+      <canvas id="mychart1"></canvas>
+    </div>
+    <div class="mt-5 w-full flex justify-center">
+      <button id="weight" class="px-6 py-2 bg-[#f97416] text-white font-semibold rounded-full hover:bg-[#e0630b] transition-colors shadow-sm">
+        Weight Update
+      </button>
+    </div>
+  </div>
+
+</section>
     <!-- Weekly update -->
      
-     <section class="p-5 mt-10" style="background-color: #FDF3E5; display: none; border: #f974165d 2px solid; border-radius: 10px;" id="update">
+     <section class="p-5 mt-10" style="background-color: #FDF3E5; display: none; border-radius: 10px;" id="update">
         <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weekly Report <span id="close" class="px-5 cursor-pointer">X</span></h1>
        
          <div class="form-container">
-    <select id="day" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2">
+    <select id="day" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332; border: #f974165d 2px solid;" class="px-2">
       <option value="Sunday">Sunday</option>
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
@@ -157,9 +167,9 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       <option value="Saturday">Saturday</option>
     </select>
 
-    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="workout" placeholder="Workouts-20" min="0">
-    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="meals" placeholder="Meals-3" min="0">
-    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="quiz" placeholder="Quiz-100" min="0">
+    <input style="border: #f974165d 2px solid; outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="workout" placeholder="Workouts-20" min="0">
+    <input style="border: #f974165d 2px solid; outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="meals" placeholder="Meals-3" min="0">
+    <input style="border: #f974165d 2px solid; outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="quiz" placeholder="Quiz-100" min="0">
     <button id="submit" class="btn">Submit</button>
   </div>
 
@@ -183,21 +193,21 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   </div>
      </section>
      <!-- Weight update -->
-      <section class="p-5 " style="background-color: #FDF3E5; display: none; border: #f974165d 2px solid; border-radius: 10px;" id="weightupdate">
+      <section class="p-5 " style="background-color: #FDF3E5; display: none; border-radius: 10px;" id="weightupdate">
         <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weight update <span id="close1" class="px-5 cursor-pointer">X</span></h1>
        
-    <div class="weight-container" style="display: flex; flex-direction: column;">
-    <select id="weightweek" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2">
+    <div class="weight-container" style="display: flex; align-items: center; flex-direction: column; gap: 15px;">
+    <select id="weightweek" style="border: #f974165d 2px solid; outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="p-2">
       <option value="Week-1">Week-1</option>
       <option value="Week-2">Week-2</option>
       <option value="Week-3">Week-3</option>
       <option value="Week-4">Week-4</option>
     </select>
 
-    <input style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="px-2" type="number" id="weightnum" placeholder="Your Weight" min="40">
+    <input style="border: #f974165d 2px solid; outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332;" class="p-2" type="number" id="weightnum" placeholder="Your Weight" min="40">
     <p id="weightresult" class="text-red-700"></p>
    
-    <button id="submit1" class="btn">Submit</button>
+    <button id="submit1" class="btn mb-3">Submit</button>
   </div>
 
   
