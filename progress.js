@@ -183,35 +183,22 @@
       
     })
     //Week  Display
-    let week=document.getElementById("week")
-    week.addEventListener("click",function(){
-        let update=document.getElementById("update")
-        let body=document.querySelector("body")
-        update.style.display="block"
-         document.body.style.backgroundColor="#fdf3e5"
-        
-    })
-    let close=document.getElementById("close")
-    close.addEventListener("click",function(){
-        let update=document.getElementById("update")
-        let body=document.querySelector("body")
-        update.style.display="none"
-       
-    })
-    // weight dispay
+   
+   
+
      //Week  Display
     let weight=document.getElementById("weight")
     weight.addEventListener("click",function(){
         let weightupdate=document.getElementById("weightupdate")
-        let body=document.querySelector("body")
+       
         weightupdate.style.display="block"
-         document.body.style.backgroundColor="#fdf3e5"
+        
         
     })
     let close1=document.getElementById("close1")
     close1.addEventListener("click",function(){
         let weightupdate=document.getElementById("weightupdate")
-        let body=document.querySelector("body")
+        
         weightupdate.style.display="none"
        
     })
