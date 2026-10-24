@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowFit | Wellness Quiz</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">🔥</span>
+            <span>Glow<span class="logo-orange">Fit</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="glowfit-workout-library.html">Workout</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="quiz.html" class="active">Quiz</a>
+            <a href="progress.html">Progress</a>
+            <a href="community.html">Community</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn search-toggle" id="searchToggle"
+                    aria-label="Open search">⌕</button>
+
+            <form class="nav-search" id="searchForm">
+                <input type="search" id="searchInput"
+                       placeholder="Search wellness..."
+                       aria-label="Search wellness">
+            </form>
+
+            <button class="icon-btn profile-btn"
+                    aria-label="Profile">♙</button>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main class="page-container">
+
+        <!-- WELLNESS HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR WELLNESS JOURNEY</p>
+
+                <h1>Wellness <span>Quiz</span></h1>
+
+                <p class="hero-description">
+                    Discover your wellness knowledge, learn healthy habits,
+                    and take one step closer to a healthier you.
+                </p>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>10</strong>
+                        <span>Questions</span>
+                    </div>
+
+                    <div>
+                        <strong>5 min</strong>
+                        <span>Duration</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>For your health</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="Wellness illustration">
+                <div class="art-circle">
+                    <span>🧠</span>
+                </div>
+                <span class="art-heart">💚</span>
+                <span class="art-leaf">🌿</span>
+                <span class="art-spark spark-one">✦</span>
+                <span class="art-spark spark-two">✧</span>
+            </div>
+        </section>
+
+        <!-- CATEGORY INTRODUCTION -->
+        <section class="categories-section">
+            <div class="section-heading">
+                <div class="heading-icon">✦</div>
+
+                <div>
+                    <h2>Test Your Wellness Knowledge</h2>
+                    <p>Small changes make a big difference.</p>
+                </div>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="category-icon">💧</div>
+                    <h3>Healthy Habits</h3>
+                    <p>Learn about hydration and everyday health.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">🏃</div>
+                    <h3>Fitness Knowledge</h3>
+                    <p>Understand exercise and physical activity.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">😴</div>
+                    <h3>Better Lifestyle</h3>
+                    <p>Explore sleep, recovery, and stress management.</p>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-icon">🥗</div>
+                    <h3>Smart Nutrition</h3>
+                    <p>Discover balanced eating habits.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- QUIZ START SECTION -->
+        <section class="start-section" id="startSection">
+            <div>
+                <p class="eyebrow">READY TO BEGIN?</p>
+                <h2>Your Health Matters!</h2>
+                <p>Answer 10 questions and see your final score.</p>
+            </div>
+
+            <button class="primary-btn" id="startBtn">
+                Start Quiz <span>→</span>
+            </button>
+        </section>
+
+        <!-- QUIZ AREA -->
+        <section class="quiz-section hidden" id="quizSection">
+            <div class="quiz-top">
+                <div>
+                    <p class="eyebrow">GLOWFIT CHALLENGE</p>
+                    <h2>Wellness Quiz</h2>
+                </div>
+
+                <span class="question-counter" id="questionCounter">
+                    Question 1 of 10
+                </span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="question-card" id="questionCard">
+                <p class="question-category" id="questionCategory">
+                    HEALTHY HABITS
+                </p>
+
+                <h3 id="questionText">Question appears here</h3>
+
+                <div class="options-list" id="optionsList"></div>
+
+                <p class="answer-message" id="answerMessage"
+                   aria-live="polite"></p>
+
+                <div class="quiz-controls">
+                    <button class="secondary-btn" id="previousBtn">
+                        ← Previous
+                    </button>
+
+                    <button class="primary-btn" id="nextBtn" disabled>
+                        Next Question →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS AREA -->
+        <section class="result-section hidden" id="resultSection">
+            <div class="result-icon" id="resultIcon">🏆</div>
+
+            <p class="eyebrow">QUIZ COMPLETED</p>
+            <h2 id="resultTitle">Amazing Work!</h2>
+
+            <p class="result-description" id="resultDescription">
+                You have completed your wellness quiz.
+            </p>
+
+            <div class="score-circle">
+                <strong id="scoreValue">0/10</strong>
+                <span>Your Score</span>
+            </div>
+
+            <p class="result-percentage" id="resultPercentage">0%</p>
+
+            <div class="result-summary">
+                <div>
+                    <strong id="correctCount">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="wrongCount">0</strong>
+                    <span>Incorrect</span>
+                </div>
+
+                <div>
+                    <strong>10</strong>
+                    <span>Total Questions</span>
+                </div>
+            </div>
+
+            <h3 class="review-title">Review Your Answers</h3>
+            <div class="review-list" id="reviewList"></div>
+
+            <button class="primary-btn restart-btn" id="restartBtn">
+                Try Again ↻
+            </button>
+        </section>
+
+        <!-- WELLNESS REMINDER -->
+        <section class="wellness-reminder">
+            <span class="reminder-heart">💚</span>
+
+            <div>
+                <h3>Every Small Step Counts!</h3>
+                <p>Stay active, eat well, rest enough, and keep glowing.</p>
+            </div>
+
+            <span class="reminder-leaf">🌿</span>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="index.html" class="footer-logo">
+                🔥 GlowFit
+            </a>
+
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="glowfit-workout-library.html">Workouts</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="quiz.html">Quizzes</a>
+                <a href="progress.html">Progress</a>
+                <a href="community.html">Community</a>
+            </nav>
+        </div>
+
+        <p class="copyright">
+            © 2026 GlowFit. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
