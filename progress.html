@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,11 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="tailwind.config.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
     <section class="flex justify-center mt-5">
         <!--Navbar-->
@@ -84,6 +89,31 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <p style="color: #304332; " class="font-bold">20</p>
                 <p class="" style="opacity: 0.7;">Per day</p>
 
+    <!-- left -->
+    <section id="left" class="hidden">
+        <img src="" alt="">
+        <p>Welcome</p>
+        <div>
+            <h2>Dashboard</h2>
+            <h2>Goal</h2>
+            <h2>Your Performance</h2>
+            <h2>Setting</h2>
+        </div>
+    </section>
+
+    <!-- Heading -->
+    <div id="progress">
+        <h1>Your Progress</h1>
+        <p>Track your journey.Celebrate your wins!</p>
+        <div class="" style="display: flex; align-items: center;">
+            <div style="height:60px; width: 60px;">
+                <img src="./images/gym.png" alt="" style="height:100%; width: 100%;">
+            </div>
+            <div>
+                <h2>Workouts</h2>
+                <p id="workoutvalue"></p>
+                <p>This week</p>
+
             </div>
         </div>
         <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style="border: #f974165d 2px solid; border-radius: 10px; background-color:white; height: 130px; width:22%;" >
@@ -116,6 +146,16 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <h2 style="color: #f97316; font-size:large;" class="font-semibold">Goals Met</h2>
                 <p style="color: #304332; " class="font-bold">20</p>
                 <p class="" style="opacity: 0.7;">This Week</p>
+    <div class="flex" style="justify-content: space-around;">
+        <!-- Bar chart -->
+        <div class="container1" style="height: 500px; width: 40%;">
+            <canvas id="mychart"></canvas>
+        </div>
+        <!-- line chart -->
+        <div class="container2" style="height: 500px; width: 40%;">
+            <canvas id="mychart1"></canvas>
+        </div>
+    </div>
 
             </div>
         </div>
@@ -260,5 +300,82 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     
 
       </script>
+    <div>
+        <label for="">Workouts</label>
+        <input type="number">
+        <label for="">Meals</label>
+        <input type="number">
+        <label for="">Quiz</label>
+        <input type="number">
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        let mychart = document.getElementById('mychart').getContext('2d')
+        let barchart = new Chart(mychart, {
+            type: 'bar',
+            data: {
+                labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                datasets: [{
+                    label: 'Weekly Report',
+                    data: [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 10
+                        }
+                    }
+                }
+            }
+        })
+        // linechart
+        let mychart1 = document.getElementById('mychart1').getContext('2d')
+        let linechart = new Chart(mychart1, {
+            type: 'line',
+            data: {
+                labels: ['Week-1', 'Week-2', 'Week-3', 'Week-4'],
+                datasets: [{
+                    label: 'Monthly Report',
+                    data: [
+
+                    ]
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: 30,
+                        max: 150,
+                        ticks: {
+                            stepSize: 10
+                        }
+                    }
+                }
+            }
+        })
+
+
+    </script>
 </body>
+
 </html>

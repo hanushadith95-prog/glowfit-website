@@ -12,6 +12,7 @@ body {
 .navbar{
     background-color: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: #f97316 solid 2px;
 }
 .nav-link {
     border: 2px solid transparent;
@@ -95,6 +96,13 @@ body {
     
     padding: 2px 10px;
 
+}
+#week:hover,#weight:hover,#submit:hover,#submit1:hover{
+  color: #f97316;
+  background-color: #fdf3e5;
+  border: #f97316 solid 2px;
+  
+  
 }
     @media screen and (max-width: 768px){
 .navbar{
