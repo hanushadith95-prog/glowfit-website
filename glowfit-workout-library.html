@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlowFit - Workout Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="glowfit-workout-library.css">
+  <script src="glowfit-workout-library.js" defer></script>
+</head>
+<body>
+  <section class="navbar_section">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="navbar_logo" href="index.html" aria-label="GlowFit home">
+        <img src="images/logo-navbar.png" alt="GlowFit logo">
+      </a>
+
+      <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
+
+      <ul id="main_navigation" class="navbar_links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active_link" href="#workout_list">Workout</a></li>
+        <li><a class="nav-link" href="#quick_access_heading">Nutrition</a></li>
+        <li><a class="nav-link" href="#activity_heading">Quiz</a></li>
+        <li><a class="nav-link" href="#summary_heading">Progress</a></li>
+        <li><a class="nav-link" href="#footer_navigation">Community</a></li>
+      </ul>
+
+      <button id="header_search_button" class="navbar_icon_button" type="button" aria-label="Search workouts">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.5"></circle>
+          <path d="m16 16 4.2 4.2"></path>
+        </svg>
+      </button>
+
+      <span class="navbar_icon" role="img" aria-label="Profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5"></circle>
+          <path d="M5.5 20c.4-3.5 2.8-5.5 6.5-5.5s6.1 2 6.5 5.5"></path>
+        </svg>
+      </span>
+
+      <button id="menuBtn" class="menu_button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="30" height="30" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+
+      <ul id="menu" class="mobile_menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active_link" href="#workout_list">Workout</a></li>
+        <li><a class="nav-link" href="#quick_access_heading">Nutrition</a></li>
+        <li><a class="nav-link" href="#activity_heading">Quiz</a></li>
+        <li><a class="nav-link" href="#summary_heading">Progress</a></li>
+        <li><a class="nav-link" href="#footer_navigation">Community</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <main>
+    <section class="hero_section">
+      <div class="page_container hero_content">
+        <div class="hero_text">
+          <p class="eyebrow">YOUR FITNESS JOURNEY</p>
+          <h1>Move with purpose.<br><span>Feel your best.</span></h1>
+          <p class="hero_description">Find a workout that fits your life, your goals, and your pace.</p>
+
+          <label class="search_box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search_input" type="search" aria-label="Search workouts" placeholder="Search workouts, goals, exercises...">
+          </label>
+
+          <p class="community_note"><strong>2,400+</strong> people building healthier habits</p>
+        </div>
+
+        <div class="hero_image">
+          <img src="images/cover.png" alt="Athlete stretching in a training studio">
+          <div class="image_message">
+            <span aria-hidden="true">✦</span>
+            <p><strong>Small steps. Stronger you.</strong><br>Your next workout starts here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page_container page_layout">
+      <aside class="filter_panel">
+        <div class="filter_heading">
+          <button id="filter_toggle" class="text_button" type="button" aria-expanded="false">
+            Filter Workouts <span id="filter_arrow" class="filter_arrow">▼</span>
+          </button>
+          <button id="clear_filters" class="clear_button" type="button">Clear All</button>
+        </div>
+        <div id="filter_content" class="filter_content">
+          <div id="filter_options" class="filter_options"></div>
+          <button id="apply_filters" class="primary_button" type="button">Apply Filters</button>
+        </div>
+      </aside>
+
+      <div class="workout_content">
+        <section aria-labelledby="activity_heading">
+          <h2 id="activity_heading" class="section_heading">Explore by Activity</h2>
+          <div id="activity_list" class="activity_list"></div>
+        </section>
+
+        <section class="breathing_panel" aria-labelledby="breathing_heading">
+          <img class="breathing_image" src="images/recommended-guided-meditation.png" alt="A calm guided meditation session" loading="lazy">
+          <div class="breathing_text">
+            <span class="small_label">TAKE A MOMENT</span>
+            <h2 id="breathing_heading">Stress Reliever Breathing Exercise</h2>
+            <p>Calm your mind and feel better in just a few minutes.</p>
+          </div>
+          <div id="timer_ring" class="timer_ring">
+            <div class="timer_face">
+              <strong id="timer_clock">05:00</strong>
+              <span>min</span>
+            </div>
+          </div>
+          <ol id="breathing_steps" class="breathing_steps"></ol>
+          <button id="timer_button" class="primary_button timer_button" type="button">Start Now</button>
+        </section>
+
+        <section class="recommended_section" aria-labelledby="recommended_heading">
+          <div class="section_top">
+            <div>
+              <h2 id="recommended_heading" class="section_heading">Recommended for You</h2>
+              <p class="section_description">Based on your goals, activity, and preferences.</p>
+            </div>
+            <div class="workout_controls">
+              <label for="sort_select">Sort by:</label>
+              <select id="sort_select">
+                <option value="popular">Popular</option>
+                <option value="duration">Duration</option>
+                <option value="calories">Calories</option>
+              </select>
+              <button id="grid_view_button" class="view_button selected_view" type="button" aria-label="Show grid view">▦</button>
+              <button id="list_view_button" class="view_button" type="button" aria-label="Show list view">☰</button>
+            </div>
+          </div>
+
+          <div id="workout_list" class="workout_list"></div>
+          <p id="empty_message" class="empty_message" hidden>No workouts match your filters.</p>
+        </section>
+
+        <section class="summary_panel" aria-labelledby="summary_heading">
+          <div class="summary_intro">
+            <span class="summary_icon" aria-hidden="true">🌿</span>
+            <div>
+              <h2 id="summary_heading">You’re All Set!</h2>
+              <p>Great job! You completed your workout.</p>
+            </div>
+          </div>
+          <div class="summary_stats">
+            <div class="summary_stat"><span aria-hidden="true">🔥</span><p>Calories Burned<strong>180 kcal</strong></p></div>
+            <div class="summary_stat"><span aria-hidden="true">⏱️</span><p>Duration<strong>25 min</strong></p></div>
+            <div class="summary_stat"><span aria-hidden="true">★</span><p>Workout Type<strong>Cardio</strong></p></div>
+            <div class="summary_stat"><span aria-hidden="true">🌱</span><p><strong>Keep going!</strong>Consistency builds results.</p></div>
+          </div>
+        </section>
+
+        <section class="quick_access_panel" aria-labelledby="quick_access_heading">
+          <div class="quick_access_intro">
+            <span aria-hidden="true">⚡</span>
+            <div>
+              <h2 id="quick_access_heading">Quick Access</h2>
+              <p>Jump to your favorite sections.</p>
+            </div>
+          </div>
+          <div id="quick_links" class="quick_links"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site_footer">
+    <div class="page_container footer_content">
+      <a class="footer_logo" href="#">GlowFit</a>
+      <nav id="footer_navigation" class="footer_navigation" aria-label="Footer navigation"></nav>
+      <p class="copyright">© 2025 GlowFit. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
