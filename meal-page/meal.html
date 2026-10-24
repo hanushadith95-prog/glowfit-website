@@ -57,7 +57,7 @@
 
     <!-- Hero Section -->
     <section class="max-w-7xl  my-16 mx-auto">
-        <div class="grid md:grid-cols-2 items-center bg-orange-200 rounded-xl overflow-hidden">
+        <div class="grid sm:grid-cols-2 items-center bg-orange-200 rounded-xl overflow-hidden sm:m-10">
             <div class="px-10 py-16">
                 <h1 class="text-4xl font-bold text-gray-900 mb-5">
                     Better Food <br>Brighter You
@@ -65,14 +65,14 @@
                 <p class="text-sm text-gray-600">Healthy recipes, meal plans and nutrition tips for a stronger,
                     healthier you.</p>
             </div>
-            <div class="w-full h-64 md:h-64 object-cover bg-orange-300">
-                <img class="w-full h-full object-cover rounded-lg " src="meal_img/healthy-bowl.jpg" alt="bowl_img">
+            <div class="w-full h-64 md:h-64 object-cover bg-orange-200 sm:pr-5 lg:pr-0">
+                <img class="w-full h-full object-cover rounded-lg" src="meal_img/healthy-bowl.jpg" alt="bowl_img">
             </div>
         </div>
     </section>
 
     <!-- Tabs -->
-    <section class="tabs max-w-7xl mx-auto mt-6">
+    <section class="tabs max-w-7xl mx-auto mt-6 sm:mx-11 lg:mx-auto">
         <div class="flex gap-6 border-b border-gray-300 text-sm">
             <a href="#"
                 class="pb-3 px-3 text-gray-600 hover:font-semibold hover:text-orange-500 hover:border-b hover:border-orange-500">Meal
@@ -87,7 +87,7 @@
     </section>
 
     <!-- Diet Plan -->
-    <section class="diet_plan max-w-7xl mx-auto px-4 my-10 flex justify-between gap-10 ">
+    <section class="diet_plan max-w-7xl px-4 my-10 flex justify-between gap-10 sm:flex-col sm:mx-10 lg:mx-auto lg:flex-row">
         <div class="">
             <h1 class="text-2xl">Plan Your Meals</h1>
             <p class="text-gray-600 text-sm mt-3">Choose your preferences and get a personalized meal plan.</p>
@@ -113,7 +113,7 @@
                 </div>
             </form>
         </div>
-        <div class="p-6 rounded-lg bg-orange-200 ">
+        <div class="p-6 rounded-lg bg-orange-200">
             <h1 class="text-2xl">Nutrition Tips</h1>
             <div class="mt-5 text-sm text-gray-700 flex justify-around gap-5">
                 <div>
@@ -129,9 +129,8 @@
         </div>
     </section>
 
-    <!-- Meal Plan -->
+    <!-- Day Table -->
      <section class="meal_plan">
-        <!-- Day Table -->
         <div class=" max-w-7xl flex justify-between items-center border gap-40 mx-auto my-8 w-fit rounded-lg border-gray-300 ">
             <button class="hover:bg-orange-300 hover:text-white px-3 py-1">&lt;</button>
             <p>Day 1</p>
@@ -140,26 +139,26 @@
         </div>
 
         <!-- Food Plan -->
-         <div class="max-w-7xl mx-auto grid grid-cols-4 items-center justify-items-center">
-            <div class="border-2 p-3">
+         <div class="max-w-7xl lg:mx-auto grid sm:grid-cols-2 sm:gap-5 sm:mx-20 lg:grid-cols-4 items-center justify-items-center">
+            <div class="border-2 p-3 hover:bg-orange-200 hover:border-orange-300">
                 <label class="text-gray-500 p-1 text-sm">Breakfast</label>
                 <img class="w-44 h-40 rounded-xl p-1 " src="meal_img/oats-fruits.jpg" alt="Meal img">
                 <p class="p-1 ">Oats with Fruits</p>
                 <p class="text-gray-500 text-sm">350 kcal</p>
             </div>
-            <div class="border-2 p-3">
+            <div class="border-2 p-3 hover:bg-orange-200 hover:border-orange-300">
                 <label class="text-gray-500 text-sm p-1 ">Lunch</label>
                 <img class="p-1 w-44 h-40 rounded-xl" src="meal_img/quinoa-salad.jpg" alt="Meal img">
                 <p class="p-1 ">Quinoa Salad</p>
                 <p class="text-gray-500 text-sm">450 kcal</p>
             </div>
-            <div class="border-2 p-3">
+            <div class="border-2 p-3 hover:bg-orange-200 hover:border-orange-300">
                 <label class="p-1 text-gray-500 text-sm">Snack</label>
                 <img class="p-1 w-44 h-40 rounded-xl" src="meal_img/mixed-nuts.jpg" alt="Meal img">
                 <p class="p-1 ">Mixed Nuts</p>
                 <p class="text-gray-500 text-sm">200 kcal</p>
             </div>
-            <div class="border-2 p-3">
+            <div class="border-2 p-3 hover:bg-orange-200 hover:border-orange-300">
                 <label class="text-gray-500 p-1 text-sm">Dinner</label>
                 <img class="w-44 h-40 p-1 rounded-xl" src="meal_img/grilled-vegetables.jpg" alt="Meal img">
                 <p class="p-1">Grilled vegetables</p>
