@@ -48,9 +48,9 @@
                     borderWidth:3,
                     borderColor:'#F97316',
                     pointBackgroundColor:'#304332', // The inside fill color of the dot
-  pointBorderColor: '#F97316',             // The outer border color of the dot
-  pointBorderWidth: 1,                     // Thickness of the dot's border
-  pointRadius: 4
+                    pointBorderColor: '#F97316',             // The outer border color of the dot
+                    pointBorderWidth: 1,                     // Thickness of the dot's border
+                    pointRadius: 4
                     
                 }]
             },
@@ -174,15 +174,20 @@
       const dayIndex=dayMapping[day]
      
       if(dayIndex!==undefined && typeof barchart!=='undefined'){
-        
-
+     
         barchart.data.datasets[0].data[dayIndex]=Number(avgPct.toFixed(1))
         barchart.update()
       }
+      document.getElementById("dayres").textContent=workoutInput
+      document.getElementById("mealres").textContent=Number(mealsInput)
+      document.getElementById("dayday").textContent=day
+      document.getElementById("mealday").textContent=day
+      document.getElementById("quizres").textContent=Number(quizInput)
+      document.getElementById("goalres").textContent=Number(avgPct.toFixed(1))
 
       
     })
-    //Week  Display
+    
    
    
 
@@ -198,7 +203,6 @@
     let close1=document.getElementById("close1")
     close1.addEventListener("click",function(){
         let weightupdate=document.getElementById("weightupdate")
-        
         weightupdate.style.display="none"
        
     })

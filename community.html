@@ -9,6 +9,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="style.css" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet"
@@ -27,40 +28,49 @@
 
 <body class="bg-orange-50 text-slate-800">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4">
-
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-extrabold text-slate-900">
-                Glow<span class="text-orange-600">Fit</span>
+   <section class="flex justify-center mt-5">
+        <!--Navbar-->
+        <nav
+            class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3">
+            <a href="index.html" class="shrink-0">
+                <img src="images/l1.png" alt="WellLife logo" class="h-10 w-10 object-contain">
             </a>
-
-            <!-- Navigation -->
-            <div class="flex flex-wrap items-center gap-4 md:gap-7 text-sm font-medium">
-
-                <a href="#" class="hover:text-orange-600">Home</a>
-                <a href="#" class="hover:text-orange-600">Workouts</a>
-                <a href="#" class="hover:text-orange-600">Nutrition</a>
-                <a href="#" class="hover:text-orange-600">Quiz</a>
-                <a href="#" class="hover:text-orange-600">Progress</a>
-
-                <a href="#community"
-                    class="text-orange-600 border-b-2 border-orange-600 pb-1">
-                    Community
-                </a>
-
-            </div>
-
-            <!-- Profile Icons -->
-            <div class="flex items-center gap-4">
-                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-orange-600"></i>
-                <i class="fa-solid fa-bell cursor-pointer hover:text-orange-600"></i>
-                <i class="fa-solid fa-user-circle text-2xl text-slate-700"></i>
-            </div>
-
-        </div>
-    </nav>
+            <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
+            <ul class="flex gap-5 items-center">
+                <li><a href="index.html"  class="nav-link">Home</a></li>
+                 <li><a href="glowfit-workout-library.html"  class="nav-link">Workouts</a></li>
+                <li><a href="meal-page/meal.html"  class="nav-link">Nutrition</a></li>
+                <li><a href="quiz.html"  class="nav-link">Quiz</a></li>
+                <li><a href="progress.html"  class="nav-link">Progress</a></li>
+                 <li><a href="community.html"  class="nav-link">Community</a></li>
+            </ul>
+            <i class="nav-link fa-solid fa-magnifying-glass "></i>
+            <i class="nav-link fa-solid fa-user"></i>
+            <button id="menuBtn" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <ul id="menu" style="background-color: #214E3D;"
+                class="hidden md:hidden absolute right-0 top-full w-30 flex-col gap-3 text-white text-right px-4 pb-4 z-50">
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1 mt-2"><a
+                        class="hover:underline" href="index.html">Home</a>
+                </li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="glowfit-workout-library.html">Workout</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="./meal-page/meal.html">Nutrition</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="quiz.html">Quiz</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="progress.html">Progress</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </section>
 
 
     <!-- Main Container -->
@@ -429,16 +439,15 @@
         </section>
 
     </main>
+<!-- Footer -->
 
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white mt-10">
+  <footer class=" text-white mt-10" style="background-color:#304332">
 
         <div class="max-w-7xl mx-auto px-5 py-6 flex flex-col md:flex-row items-center justify-between gap-5">
 
             <!-- Text Logo Only -->
             <a href="#" class="text-xl font-extrabold">
-                Glow<span class="text-orange-500">Fit</span>
+                Glow<span style="color: #f97316;">Fit</span>
             </a>
 
             <div class="flex flex-wrap justify-center gap-5 text-sm text-slate-300">
@@ -456,6 +465,15 @@
         </div>
 
     </footer>
+     <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+
+    </script>
 
 </body>
 
