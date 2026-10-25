@@ -122,6 +122,10 @@ body {
     background: transparent;
     cursor: pointer;
  }
+ .right{
+  width: 90% !important;
+
+ }
  
    
     
@@ -137,3 +141,4 @@ body {
    
 
  }
+ 

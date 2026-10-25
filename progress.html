@@ -9,6 +9,7 @@
 https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js
 "></script>
 <link rel="stylesheet" href="tailwind.config.css">
+ <link href="style.css" rel="stylesheet">
 <link href="
 https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 " rel="stylesheet">
@@ -18,20 +19,20 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <section class="flex justify-center mt-5">
         <!--Navbar-->
         <nav
-            class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-400 items-center md:justify-center p-3">
+            class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3">
             <a href="index.html" class="shrink-0">
-                <img src="images/logo-navbar.png" alt="WellLife logo" class="h-10 w-10 object-contain">
+                <img src="images/l1.png" alt="WellLife logo" class="h-10 w-10 object-contain">
             </a>
             <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
             <ul class="flex gap-5 items-center">
                 <li><a href="index.html"  class="nav-link">Home</a></li>
                  <li><a href="glowfit-workout-library.html"  class="nav-link">Workouts</a></li>
                 <li><a href="meal-page/meal.html"  class="nav-link">Nutrition</a></li>
-                <li><a href="quiz.html"  class="nav-link">Progress</a></li>
+                <li><a href="quiz.html"  class="nav-link">Quiz</a></li>
                 <li><a href="progress.html"  class="nav-link">Progress</a></li>
                  <li><a href="community.html"  class="nav-link">Community</a></li>
             </ul>
@@ -44,14 +45,21 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            <ul id="menu"
-                class="hidden md:hidden absolute right-0 top-full w-full flex-col gap-3 text-orange-500 text-right px-4 pb-4 z-50">
-                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="index.html">Home</a>
+            <ul id="menu" style="background-color: #214E3D;"
+                class="hidden md:hidden absolute right-0 top-full w-30 flex-col gap-3 text-white text-right px-4 pb-4 z-50">
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1 mt-2"><a
+                        class="hover:underline" href="index.html">Home</a>
                 </li>
-                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Workout</a></li>
-                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Nutrition</a></li>
-                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="#">Quiz</a></li>
-                <li class="hover:bg-orange-200 rounded px-4 py-1"><a class="hover:underline" href="progress.html">Progress</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="glowfit-workout-library.html">Workout</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="./meal-page/meal.html">Nutrition</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="quiz.html">Quiz</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="progress.html">Progress</a></li>
+                <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+                        class="hover:underline" href="community.html">Community</a></li>
             </ul>
         </nav>
     </section>
@@ -69,14 +77,14 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             <img src="./images/progress img.png" alt="" class="h-full w-full  rounded-lg object-cover shadow-md">
           </div>
      </section>
- <!-- Weekly update -->
-      
-     <section id="weightupdate" class="mt-5 rounded-xl shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 p-2 md:p-2 max-w-6xl mx-auto"  style="background-color:#FEFBF5; display:none; ">
-     
-     <section class="p-5 mt-10 items-center" style=" border-radius: 10px;">
+
+      <!-- Container -->
+     <section id="weightupdate" class="flex flex-col w-full justify-around gap-8 mt-10 px-4 sm:px-8 "  style="background-color:#FEFBF5; display:none; ">
+      <!-- Weekly update -->
+     <div class="container-box p-5 mt-10" style=" border-radius: 10px;">
         <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weekly Report <span id="close1" class="px-4 cursor-pointer">X</span></h1>
        
-         <div class="form-container">
+    <div class="form-container">
     <select id="day" style="outline: none; background-color:white; width: 50%; border-radius: 20px; color: #304332; border: #f974165d 2px solid;" class="px-2">
       <option value="Sunday">Sunday</option>
       <option value="Monday">Monday</option>
@@ -111,9 +119,9 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       <tbody id="tablebody"></tbody>
     </table>
   </div>
-     </section>
+     </div>
      <!-- Weight update -->
-      <section class="p-5 mt-10" style=" border-radius: 10px;">
+      <div class="container-box p-5 mt-10" style=" border-radius: 10px;">
         <h1 class="text-center mb-5 text-xl font-semibold" style="color: #f97316; font-style: italic;">Weight update</h1>
        
     <div class="weight-container" style="display: flex; align-items: center; flex-direction: column; gap: 15px;">
@@ -145,7 +153,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       <tbody id="weightbody"></tbody>
     </table>
   </div>
-     </section>
+</div>
      </section>
 
         <!-- Heading -->
@@ -159,8 +167,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </div>
             <div>
                 <h2 style="color: #f97316; font-size:large;" class="font-semibold">Workouts</h2>
-                <p style="color: #304332; " class="font-bold">20</p>
-                <p class="" style="opacity: 0.7;">Per day</p>
+                <p style="color: #304332; " class="font-bold"  id="dayres">0</p>
+                <p class="" style="opacity: 0.7;" id="dayday">Day</p>
 
             </div>
         </div>
@@ -170,8 +178,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </div>
             <div>
                 <h2 style="color: #f97316; font-size:large;" class="font-semibold">Healthy Meals</h2>
-                <p style="color: #304332; " class="font-bold">3</p>
-                <p class="" style="opacity: 0.7;">Per day</p>
+                <p style="color: #304332; " class="font-bold"  id="mealres">0</p>
+                <p class="" style="opacity: 0.7;"  id="mealday">Day</p>
  
             </div>
         </div>
@@ -181,7 +189,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </div>
             <div>
                 <h2 style="color: #f97316; font-size:large;" class="font-semibold">Quiz Score</h2>
-                <p style="color: #304332; " class="font-bold"></p>
+                <p style="color: #304332; " class="font-bold" id="quizres">0</p>
                 <p class="" style="opacity: 0.7;">This Week</p>
 
             </div>
@@ -192,7 +200,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </div>
             <div>
                 <h2 style="color: #f97316; font-size:large;" class="font-semibold">Goals Met</h2>
-                <p style="color: #304332; " class="font-bold">20</p>
+                <p style="color: #304332; " class="font-bold" id="goalres">0</p>
                 <p class="" style="opacity: 0.7;">This Week</p>
 
             </div>
@@ -226,7 +234,75 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   </div>
 
 </section>
-    
+
+<!-- Achivements -->
+     <section  class="flex flex-col  md:flex-row w-full justify-between gap-8 mx-6  mt-10 sm:px-8 ">
+        <!-- Left -->
+        <div style="width: 45%;" class="right flex flex-col items-center justify-center">
+            <h1 class="mb-5 text-xl font-semibold" style="color: #304332;">Recent Achievements </h1>
+            <div class="flex gap-4 items-center justify-center">
+                <div class="flex flex-col gap-1">
+                    <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
+                
+                   <img src="./images/star.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
+                 </div>
+                 <p style="color: #304332; font-weight: 500;">7 Days Streak</p>
+                 <p style="color: #f97316;">Workouts</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
+                
+                   <img src="./images/healthy-living.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
+                 </div>
+                 <p style="color: #304332; font-weight: 500;">Healthy Eater</p>
+                 <p style="color: #f97316;">Nutrition</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
+                
+                   <img src="./images/muscle.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
+                 </div>
+                 <p style="color: #304332; font-weight: 500;">Wellness Hero</p>
+                 <p style="color: #f97316;">Quiz</p>
+                </div>
+            </div>
+        </div>
+        <!-- Right -->
+        <div style="width:45%;" class="right mx-5">
+             <h1 class="mb-2 text-xl font-semibold" style="color: #304332;">Your Goals </h1>
+             <div class="mb-5">
+        <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-medium text-gray-700">Lose 5 kg</span>
+            <span class="text-sm font-semibold text-gray-600">60%</span>
+        </div>
+        <div class="w-full bg-[#FFE5D4] h-2.5 rounded-full overflow-hidden">
+            <div class=" h-full rounded-full" style="width: 60%; background-color: #f97316;"></div>
+        </div>
+    </div>
+
+    <!-- Goal 2 -->
+    <div class="mb-5">
+        <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-medium text-gray-700">Drink 2L Water</span>
+            <span class="text-sm font-semibold text-gray-600">80%</span>
+        </div>
+        <div class="w-full bg-[#FFE5D4] h-2.5 rounded-full overflow-hidden">
+            <div class=" h-full rounded-full" style="width: 80%; background-color: #f97316;"></div>
+        </div>
+    </div>
+
+    <!-- Goal 3 -->
+    <div>
+        <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-medium text-gray-700">Workout 4x/week</span>
+            <span class="text-sm font-semibold text-gray-600">75%</span>
+        </div>
+        <div class="w-full bg-[#FFE5D4] h-2.5 rounded-full overflow-hidden">
+            <div class=" h-full rounded-full" style="width: 75%; background-color: #f97316;"></div>
+        </div>
+    </div>
+        </div>
+     </section>
       <!-- Footer -->
     <footer class=" text-white mt-10" style="background-color:#304332">
 

@@ -7,7 +7,28 @@
   --brand_color: #f26a1b;
   --soft_orange: #fff5ed;
 }
-
+.heading{
+    font-weight: bold;
+    font-size: 24px
+}
+.heading__1{
+    color: #f97316;
+}
+.navbar{
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nav-link {
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    padding: 4px 8px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+    border-color: #f97316;
+    background-color: #f97316;
+    color: white;
+}
 * {
   box-sizing: border-box;
 }
@@ -49,22 +70,21 @@ select:focus-visible {
 .navbar_section {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0 16px;
 }
 
 .navbar {
   width: fit-content;
   max-width: 100%;
-  min-height: 66px;
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   padding: 12px;
   border: 2px solid #f97316;
-  border-radius: 40px;
+  border-radius: 9999px;
   background: whitesmoke;
   box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
   transition: border-color 0.3s ease-in-out;
@@ -87,7 +107,7 @@ select:focus-visible {
 .heading {
   margin: 0;
   color: #304332;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -976,21 +996,6 @@ select:focus-visible {
 
 /* Smaller screens */
 @media (max-width: 1000px) {
-  .navbar {
-    width: min(100%, 680px);
-    justify-content: space-between;
-  }
-
-  .navbar_links,
-  .navbar_icon_button,
-  .navbar_icon {
-    display: none;
-  }
-
-  .menu_button {
-    display: grid;
-  }
-
   .page_layout {
     grid-template-columns: 1fr;
   }
@@ -1020,6 +1025,7 @@ select:focus-visible {
 
 @media (max-width: 768px) {
   .navbar {
+    display: flex;
     width: 90%;
     justify-content: space-between;
     box-sizing: border-box;
@@ -1030,8 +1036,7 @@ select:focus-visible {
     display: none;
   }
 
-  .navbar_icon_button,
-  .navbar_icon {
+  .navbar_icon_button {
     display: none;
   }
 
@@ -1046,28 +1051,12 @@ select:focus-visible {
   }
 
   .navbar_section {
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 0;
   }
 
   .navbar {
-    min-height: 0;
-    gap: 0;
     padding: 10px 16px;
-  }
-
-  .navbar_logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .heading {
-    font-size: 20px;
-  }
-
-  .menu_button svg {
-    width: 25px;
-    height: 25px;
   }
 
   .hero_content {
