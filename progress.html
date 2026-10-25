@@ -20,8 +20,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="overflow-x: hidden;">
-    <section class="flex justify-center mt-5">
+<body style="">
+     <section class="flex justify-center mt-5">
         <!--Navbar-->
         <nav
             class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3">
@@ -29,16 +29,28 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <img src="images/l1.png" alt="WellLife logo" class="h-10 w-10 object-contain">
             </a>
             <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
-            <ul class="flex gap-5 items-center">
-                <li><a href="index.html"  class="nav-link">Home</a></li>
-                 <li><a href="glowfit-workout-library.html"  class="nav-link">Workouts</a></li>
-                <li><a href="meal-page/meal.html"  class="nav-link">Nutrition</a></li>
-                <li><a href="quiz.html"  class="nav-link">Quiz</a></li>
-                <li><a href="progress.html"  class="nav-link">Progress</a></li>
-                 <li><a href="community.html"  class="nav-link">Community</a></li>
+            <ul class="hidden md:flex gap-5 items-center">
+                <a href="index.html">
+                    <li class="nav-link">Home</li>
+                </a>
+                <a href="glowfit-workout-library.html">
+                    <li class="nav-link">Workout</li>
+                </a>
+                <a href="./meal-page/meal.html">
+                    <li class="nav-link">Nutrition</li>
+                </a>
+                <a href="quiz.html">
+                    <li class="nav-link">Quiz</li>
+                </a>
+                <a href="progress.html">
+                    <li class="nav-link">Progress</li>
+                </a>
+                <a href="community.html">
+                    <li class="nav-link">Community</li>
+                </a>
             </ul>
             <i class="nav-link fa-solid fa-magnifying-glass "></i>
-            <i class="nav-link fa-solid fa-user"></i>
+            <a href="login.html"><i class="nav-link1 fa-solid fa-user"></i></a>
             <button id="menuBtn" aria-label="Toggle menu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" width="30" height="30">
@@ -111,9 +123,9 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   
 
   <!-- Table Output -->
-  <div class="table-container" style=" width: 70%; margin-left: auto; margin-right: auto;" >
+  <div class="table-container" style="" >
     <table style="background-color: white;">
-      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light" >
+      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light text-sm" >
         <tr >
           <th>Day</th>
           <th>Workouts</th>
@@ -148,9 +160,9 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   
 
   <!-- Table Output -->
-  <div class="table-container" style=" width: 70%; margin-left: auto; margin-right: auto;" >
+  <div class="table-container" style="" >
     <table style="background-color: white;">
-      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light" >
+      <thead style="color: #f97316; background-color: #fdf3e5;" class="font-light text-sm" >
         <tr >
           <th>Week</th>
            <th>Weight</th>
@@ -215,7 +227,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
         
     </section>
-   <!-- Charts ection -->
+   <!-- Charts section -->
 <section id="chart" class="flex flex-col md:flex-row w-full justify-around gap-8 mt-10 px-4 sm:px-8 ">
   
   <!-- Bar Chart -->
