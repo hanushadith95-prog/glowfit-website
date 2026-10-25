@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress Dashboard</title>
     <link rel="stylesheet" href="progress1.css">
+     <script src="https://cdn.tailwindcss.com"></script>
     <script src="
 https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js
 "></script>
@@ -63,20 +64,26 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </ul>
         </nav>
     </section>
+    <section>
    
       <!--Image section  -->
-     <section style="width: 100%; background-color:#FEFBF5;" class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="w-full flex flex-col items-center justify-center text-center">
-                <h1 style="color: #f97316;" class="mt-5 font-bold text-4xl mb-2">Your Progress</h1>
-                <p style="color: #304332; font-style: italic;" class="text-lg mb-4">Track your journey. Celebrate your wins!</p>
-                 <button id="weight" class="px-6 py-2 bg-[#f97416] text-white font-semibold rounded-full hover:bg-[#e0630b] transition-colors shadow-md ease-in-out">
-        Update Your Progress
-    </button>
-</div>
-          <div style="width: 500px; height: 400px; overflow: hidden;" class="p-6 rounded-lg ">
-            <img src="./images/progress img.png" alt="" class="h-full w-full  rounded-lg object-cover shadow-md">
-          </div>
-     </section>
+    <section style="background-color: #FEFBF5;" class="w-full py-16 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Text & Button -->
+        <div class="flex flex-col items-start text-left">
+            <h1 style="color: #f97316;" class="font-bold text-4xl md:text-5xl mb-4">Your Progress</h1>
+            <p style="color: #304332; font-style: italic;" class="text-lg md:text-xl mb-6">Track your journey. Celebrate your wins!</p>
+            <button id="weight" class="px-8 py-3 bg-[#f97416] text-white font-semibold rounded-full hover:bg-[#e0630b] transition-colors shadow-lg ease-in-out">
+                Update Your Progress
+            </button>
+        </div>
+
+        <!-- Right Column: Image Container -->
+        <div class="w-full h-[320px] md:h-[420px] overflow-hidden rounded-2xl shadow-xl">
+            <img src="./images/progress img.png" alt="Progress Tracking Illustration" class="h-full w-full object-cover rounded-2xl">
+        </div>
+    </div>
+</section>
 
       <!-- Container -->
      <section id="weightupdate" class="flex flex-col w-full justify-around gap-8 mt-10 px-4 sm:px-8 "  style="background-color:#FEFBF5; display:none; ">
@@ -159,14 +166,14 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         <!-- Heading -->
      <section class="mt-5 relative">
         
-        <div class="flex justify-between mt-5 px-10" id="progress">
+        <div class="flex  flex-wrap justify-between mt-5 px-5" id="progress">
 
         <div id="progress_box" class="transform hover:scale-105 transition duration-300 mt-4 flex gap-5 p-5 shadow-lg " style=" border-radius: 10px; background-color:#FEFBF5; height: 130px; width:22%;" >
             <div style="height:50px; width: 50px; border-radius: 50%; background-color: #f9741652;">
                 <img src="./images/gym.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
             <div>
-                <h2 style="color: #f97316; font-size:large;" class="font-semibold">Workouts</h2>
+                <h2 style="color: #f97316;"  class="font-semibold custom-heading">Workouts</h2>
                 <p style="color: #304332; " class="font-bold"  id="dayres">0</p>
                 <p class="" style="opacity: 0.7;" id="dayday">Day</p>
 
@@ -177,7 +184,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <img src="./images/restaurant.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
             <div>
-                <h2 style="color: #f97316; font-size:large;" class="font-semibold">Healthy Meals</h2>
+                <h2 style="color: #f97316;"  class="font-semibold custom-heading">Healthy Meals</h2>
                 <p style="color: #304332; " class="font-bold"  id="mealres">0</p>
                 <p class="" style="opacity: 0.7;"  id="mealday">Day</p>
  
@@ -188,7 +195,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <img src="./images/mindset.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
             <div>
-                <h2 style="color: #f97316; font-size:large;" class="font-semibold">Quiz Score</h2>
+                <h2 style="color: #f97316;"  class="font-semibold custom-heading">Quiz Score</h2>
                 <p style="color: #304332; " class="font-bold" id="quizres">0</p>
                 <p class="" style="opacity: 0.7;">This Week</p>
 
@@ -199,7 +206,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
                 <img src="./images/goal.png" alt="" style="height:100%; width: 100%; border-radius: 50%;" >
             </div>
             <div>
-                <h2 style="color: #f97316; font-size:large;" class="font-semibold">Goals Met</h2>
+                <h2 style="color: #f97316;" class="font-semibold custom-heading">Goals Met</h2>
                 <p style="color: #304332; " class="font-bold" id="goalres">0</p>
                 <p class="" style="opacity: 0.7;">This Week</p>
 

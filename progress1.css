@@ -105,6 +105,9 @@ body {
   
   
 }
+.custom-heading {
+  font-size: 1rem; 
+}
     @media screen and (max-width:500px){
 .navbar{
     display: flex;
@@ -126,16 +129,24 @@ body {
   width: 90% !important;
 
  }
-  #progress #progress_box{
-      height: 130px;
-      flex: 0 0 200px;
+  #progress_box{
+      width: 45% !important;
+      height: 150px !important;
     }
-    #progress{
-      flex-wrap: wrap;
-    }
+
+   
+    
  
    
     
+}
+
+
+
+@media (min-width: 768px) {
+  .custom-heading {
+    font-size: 1.125rem; /* Larger size */
+  }
 }
  @media screen and (max-width: 1000px){
   
