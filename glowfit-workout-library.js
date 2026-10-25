@@ -278,12 +278,19 @@ function renderQuickLinks() {
 }
 
 function renderFooterNavigation() {
-  const navigationLinks = ["Home", "Workouts", "Yoga", "Diet", "Progress", "Community", "Help"];
+  const navigationLinks = [
+    ["Home", "index.html"],
+    ["Workouts", "glowfit-workout-library.html"],
+    ["Nutrition", "meal-page/meal.html"],
+    ["Quiz", "quiz.html"],
+    ["Progress", "progress.html"],
+    ["Community", "community.html"],
+  ];
   const footerNavigation = document.getElementById("footer_navigation");
   let linkHtml = "";
 
-  for (const link of navigationLinks) {
-    linkHtml += `<a href="#">${link}</a>`;
+  for (const [label, href] of navigationLinks) {
+    linkHtml += `<a href="${href}">${label}</a>`;
   }
 
   footerNavigation.innerHTML = linkHtml;
