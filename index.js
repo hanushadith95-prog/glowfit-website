@@ -69,3 +69,31 @@ createPlanBtn.addEventListener("click", () => {
   planCard.classList.remove("hidden");
   planCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
 });
+
+//FAQ section
+// FAQ accordion
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const button = item.querySelector(".faq-button");
+  const answer = item.querySelector(".faq-answer");
+  const icon = item.querySelector("i");
+
+  button.addEventListener("click", () => {
+    const wasOpen = !answer.classList.contains("hidden");
+
+    // Close every item
+    faqItems.forEach((other) => {
+      other.querySelector(".faq-answer").classList.add("hidden");
+      other.querySelector("i").classList.remove("rotate-180");
+      other.querySelector(".faq-button").setAttribute("aria-expanded", "false");
+    });
+
+    // Open the clicked one, unless it was already open
+    if (!wasOpen) {
+      answer.classList.remove("hidden");
+      icon.classList.add("rotate-180");
+      button.setAttribute("aria-expanded", "true");
+    }
+  });
+});

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7ed">
+  <title>Login | GlowFit</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <section class="flex justify-center mt-5">
+    <!--Navbar-->
+    <nav
+      class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3">
+      <a href="index.html" class="shrink-0">
+        <img src="images/l1.png" alt="WellLife logo" class="h-10 w-10 object-contain">
+      </a>
+      <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
+      <ul class="hidden md:flex gap-5 items-center">
+        <a href="index.html">
+          <li class="nav-link">Home</li>
+        </a>
+        <a href="glowfit-workout-library.html">
+          <li class="nav-link">Workout</li>
+        </a>
+        <a href="./meal-page/meal.html">
+          <li class="nav-link">Nutrition</li>
+        </a>
+        <a href="quiz.html">
+          <li class="nav-link">Quiz</li>
+        </a>
+        <a href="progress.html">
+          <li class="nav-link">Progress</li>
+        </a>
+        <a href="community.html">
+          <li class="nav-link">Community</li>
+        </a>
+      </ul>
+      <i class="nav-link fa-solid fa-magnifying-glass "></i>
+      <a href="login.html"><i class="nav-link1 fa-solid fa-user"></i></a>
+      <button id="menuBtn" aria-label="Toggle menu" class="md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          width="30" height="30">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+      <ul id="menu" style="background-color: #214E3D;"
+        class="hidden md:hidden absolute right-0 top-full w-40 flex-col gap-3 text-white text-right px-4 pb-4 z-50">
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1 mt-2"><a
+            class="hover:underline" href="index.html">Home</a>
+        </li>
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+            class="hover:underline" href="glowfit-workout-library.html">Workout</a></li>
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+            class="hover:underline" href="./meal-page/meal.html">Nutrition</a></li>
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+            class="hover:underline" href="quiz.html">Quiz</a></li>
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+            class="hover:underline" href="progress.html">Progress</a></li>
+        <li class="hover:bg-green-200 hover:text-green-900 active:text-orange-800 rounded px-4 py-1"><a
+            class="hover:underline" href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section
+    class="min-h-screen bg-[url('./images/login.jpeg')] bg-cover bg-center bg-no-repeat rounded-xl md:grid grid-cols-2 gap-4 md:mx-20 md:my-10 items-center justify-center">
+    <div class="calorie w-full ml-5 md:ml-20 mt-10 md:mt-0">
+      <div>
+        <div class="flex gap-2 items-center">
+          <a href="index.html" class="shrink-0">
+            <img src="images/l1.png" alt="WellLife logo" class="h-10 md:h-14 w-10 md:w-14 object-contain">
+          </a>
+          <div>
+            <p style="color: #f97316;" class="font-semibold text-lg ml-2">WELCOME BACK TO</p>
+            <h2 style="color: #f97316;" class="font-bold text-3xl md:text-6xl">Glow<span
+                style="color: #304332;">Fit</span>
+            </h2>
+          </div>
+        </div>
+        <p style="color: #304332;" class="text-xl md:text-3xl mt-2">Healthier Habits.Happier You</p>
+        <p style="color: #304332;" class="text-sm md:text-lg mt-3">Log in to continue your wellness journey, track your
+          progress and buld a healthier, stronger you.</p>
+      </div>
+      <div class="flex gap-10 md:gap-12 mt-10 ml-5 md:ml-20 items-center">
+        <div class="text-center">
+          <div style="background-color: #fdeeda;"
+            class="flex h-11 md:h-14 w-11 md:w-14 shrink-0 items-center justify-center rounded-full">
+            <i class="fa-solid fa-person-running text-2xl md:text-3xl text-[#f97316]"></i>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p>Better</p>
+            <p>Workouts</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <div style="background-color: #edeede;"
+            class="flex h-11 md:h-14 w-11 md:w-14 shrink-0 items-center justify-center rounded-full">
+            <i class="fa-solid fa-apple-whole text-2xl md:text-3xl text-[#304332]"></i>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p>Healthy</p>
+            <p>Nutrition</p>
+          </div class="text-sm">
+        </div>
+        <div class="text-center">
+          <div style="background-color: #fdeeda;"
+            class="flex h-11 md:h-14 w-11 md:w-14 shrink-0 items-center justify-center rounded-full">
+            <i class="fa-solid fa-spa text-2xl md:text-3xl text-[#f97316]"></i>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p>Mindful</p>
+            <p>Living</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <div style="background-color: #edeede;"
+            class="flex h-11 md:h-14 w-11 md:w-14 shrink-0 items-center justify-center rounded-full">
+            <i class="fa-solid fa-chart-simple text-2xl md:text-3xl text-[#304332]"></i>
+          </div>
+          <div class="text-xs md:text-sm">
+            <p>Track</p>
+            <p>Progress</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full max-w-md mx-auto bg-white px-4 rounded-xl text-center">
+      <!--login section-->
+      <div class="text-center mt-5">
+        <h2 style="color: #f97316;" class="font-bold text-xl md:text-2xl">Login to Your Account</h2>
+        <p style="color: #304332;" class="text-sm md:text-xl">Welcome back! Please enter your details to continue.</p>
+      </div>
+      <form id="loginForm" action="#" method="post">
+        <label class="field-label" for="email"></label>
+        <div class="input-wrap flex items-center border-2 rounded-xl p-2 md:p-4 mx-1 my-2">
+          <i style="color: #304332;" class="fa-regular fa-user shrink-0 mr-2" aria-hidden="true"></i>
+          <input class="min-w-0 flex-1 outline-none bg-transparent text-xs" id="email" name="email" type="email"
+            placeholder="Enter your email" autocomplete="email" required>
+        </div>
+        <label class="field-label" for="password"></label>
+        <div class="input-wrap flex items-center border-2 rounded-xl p-2 md:p-4 mx-1 my-2">
+          <i style="color: #304332;" class="fa-solid fa-lock shrink-0 mr-2" aria-hidden="true"></i>
+          <input class="min-w-0 flex-1 outline-none bg-transparent text-xs" id="password" name="password"
+            type="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password"
+            aria-pressed="false">
+            <i style="color: #304332;" class="fa-regular fa-eye shrink-0" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="form-options flex justify-between items-center">
+          <label style="color: #304332;" class="remember-option">
+            <input type="checkbox" name="remember">
+            <span class="text-xs md:text-sm">Remember me</span>
+          </label>
+          <a href="forgot-password.html" style="color: #304332;" class="text-link text-xs md:text-sm mr-2">Forgot
+            password?</a>
+        </div>
+        <div class="flex justify-center w-full">
+          <button style="background-color:#f97316;"
+            class="primary-button text-white text-sm md:text-lg my-5 px-10 py-2 rounded-full" type="submit">
+            <span>Log In </span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        <div class="divider"><span></span>
+          <p>OR</p><span></span>
+        </div>
+
+        <div class="flex flex-col items-center mt-5 md:mx-20 md:items-start w-full">
+          <button class="google-button border-2 px-4 md:px-10 py-2 rounded-full" id="googleSignIn" type="button">
+            <span class="google-g text-sm text-orange-400" aria-hidden="true">G</span>
+            <span class="text-sm">Continue with Google</span>
+          </button>
+        </div>
+      </form>
+
+      <p class="signup-prompt text-xs text-gray-500 mt-3 md:text-sm">Don't have an account? <a href="signup.html"
+          class="text-link text-green-900 font-bold">Sign Up</a></p>
+      <p class="privacy-note text-sm md:text-lg text-green-900 mt-3 mb-4"><i
+          class="fa-solid fa-shield-halved text-lg text-green-900" aria-hidden="true"></i> Your wellness journey is
+        personal.</p>
+    </div>
+  </section>
+  <script>
+    //nav-bar
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    });
+    //login form
+    const passwordInput = document.getElementById('password');
+    const passwordToggle = document.getElementById('passwordToggle');
+    const loginForm = document.getElementById('loginForm');
+    const formMessage = document.getElementById('formMessage');
+    const googleSignIn = document.getElementById('googleSignIn');
+
+    passwordToggle.addEventListener('click', () => {
+      const isPasswordHidden = passwordInput.type === 'password';
+      passwordInput.type = isPasswordHidden ? 'text' : 'password';
+      passwordToggle.setAttribute('aria-pressed', String(isPasswordHidden));
+      passwordToggle.setAttribute('aria-label', isPasswordHidden ? 'Hide password' : 'Show password');
+      passwordToggle.innerHTML = isPasswordHidden
+        ? '<i class="fa-regular fa-eye-slash" aria-hidden="true"></i>'
+        : '<i class="fa-regular fa-eye" aria-hidden="true"></i>';
+    });
+
+    // Demo only: connect this form to your backend before using real accounts.
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      formMessage.textContent = 'The form looks good, but login authentication has not been connected yet.';
+      formMessage.classList.add('is-visible');
+    });
+
+    googleSignIn.addEventListener('click', () => {
+      formMessage.textContent = 'Google sign-in will work after you configure Google OAuth or an authentication provider.';
+      formMessage.classList.add('is-visible');
+    });
+  </script>
+</body>
+
+</html>
