@@ -62,8 +62,8 @@ select:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 10px 20px;
-  border: 2px solid transparent;
+  padding: 12px;
+  border: 2px solid #f97316;
   border-radius: 40px;
   background: whitesmoke;
   box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
@@ -86,8 +86,8 @@ select:focus-visible {
 
 .heading {
   margin: 0;
-  color: #1b1b2a;
-  font-size: 24px;
+  color: #304332;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -110,7 +110,7 @@ select:focus-visible {
   border: 2px solid transparent;
   border-radius: 9999px;
   color: var(--muted_text);
-  font-size: 13px;
+  font-size: 16px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -142,15 +142,9 @@ select:focus-visible {
   cursor: pointer;
 }
 
-.navbar_icon_button svg,
-.navbar_icon svg {
-  width: 21px;
-  height: 21px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
+.navbar_icon_button i,
+.navbar_icon i {
+  font-size: 16px;
 }
 
 .navbar_icon {
@@ -169,44 +163,46 @@ select:focus-visible {
 
 .mobile_menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   right: 0;
   z-index: 5;
-  width: 220px;
+  width: 190px;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   margin: 0;
-  padding: 10px;
-  border: 1px solid #f4d0b8;
-  border-radius: 16px;
-  background: #ffffff;
+  padding: 8px 10px 12px;
+  background: #214e3d;
   box-shadow: 0 12px 28px rgb(26 31 44 / 12%);
   list-style: none;
 }
 
 .mobile_menu a {
   display: block;
-  padding: 4px 8px;
-  color: #f97316;
-  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
   text-align: right;
   text-decoration: none;
 }
 
 .mobile_menu a:hover {
-  border-color: #f97316;
-  background-color: #f97316;
-  color: #ffffff;
+  background-color: #bbf7d0;
+  color: #14532d;
 }
 
 .footer_logo {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--main_text);
-  font-size: 19px;
-  font-weight: 800;
+  color: #f97316;
+  font-size: 32px;
+  font-weight: bold;
   text-decoration: none;
+}
+
+.footer_logo span {
+  color: #ffffff;
 }
 
 .primary_button {
@@ -892,8 +888,7 @@ select:focus-visible {
 
 /* Footer */
 .site_footer {
-  padding: 20px 0;
-  background: #1d2434;
+  background: #0f172a;
   color: #ffffff;
 }
 
@@ -903,28 +898,48 @@ select:focus-visible {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 18px;
-}
-
-.footer_logo {
-  color: #ffffff;
+  margin: 20px;
+  padding: 12px;
 }
 
 .footer_navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 16px;
 }
 
 .footer_navigation a {
   color: #ffffff;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
+}
+
+.footer_secondary_links,
+.social_media {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer_secondary_links p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.social_media {
+  gap: 12px;
+}
+
+.social_media span {
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .copyright {
   margin: 0;
   color: #d3d5dc;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 /* Smaller screens */
@@ -955,14 +970,20 @@ select:focus-visible {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .navbar {
-    width: min(100%, 600px);
+    width: 90%;
     justify-content: space-between;
-    gap: 14px;
+    box-sizing: border-box;
+    padding: 10px 16px;
   }
 
   .navbar_links {
+    display: none;
+  }
+
+  .navbar_icon_button,
+  .navbar_icon {
     display: none;
   }
 
@@ -977,29 +998,23 @@ select:focus-visible {
   }
 
   .navbar_section {
-    margin-top: 12px;
-    padding: 0 12px;
+    margin-top: 20px;
+    padding: 0;
   }
 
   .navbar {
-    min-height: 58px;
-    gap: 10px;
-    padding: 7px 12px;
+    min-height: 0;
+    gap: 0;
+    padding: 10px 16px;
   }
 
   .navbar_logo img {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
   }
 
   .heading {
-    font-size: 17px;
-  }
-
-  .navbar_icon_button svg,
-  .navbar_icon svg {
-    width: 19px;
-    height: 19px;
+    font-size: 20px;
   }
 
   .menu_button svg {
