@@ -126,18 +126,19 @@ body {
   width: 90% !important;
 
  }
- 
-   
-    
-}
- @media screen and (max-width: 1000px){
-   #progress #progress_box{
+  #progress #progress_box{
       height: 130px;
       flex: 0 0 200px;
     }
     #progress{
       flex-wrap: wrap;
     }
+ 
+   
+    
+}
+ @media screen and (max-width: 1000px){
+  
    
 
  }

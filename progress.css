@@ -121,6 +121,14 @@ body {
     background: transparent;
     cursor: pointer;
  }
+ #progress #progress_box{
+      height: 130px;
+      flex: 0 0 180px;
+      gap: 10px;
+    }
+    #progress{
+      flex-wrap: wrap;
+    }
  /* .container1,.container2{
     
         height:200px ;
@@ -131,28 +139,8 @@ body {
     
 }
  @media screen and (max-width: 1000px){
-   #progress #progress_box{
-      height: 130px;
-      flex: 0 0 200px;
-    }
-    #progress{
-      flex-wrap: wrap;
-    }
-   /* #chart{
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    
-    
-    }
-    .container1,.container2{
-        width: 90% !important;
-        height:250px;
-        
-    } 
-    .container2{
-      margin-top:2%;
-    } */
+   
+  
 
 
  }
