@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GlowFit - Workout Library</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,35 +13,24 @@
   <script src="glowfit-workout-library.js" defer></script>
 </head>
 <body>
-  <section class="navbar_section" >
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="navbar_logo" href="index.html" aria-label="GlowFit home">
-        <img src="images/l1.png" alt="GlowFit logo">
+  <section class="flex justify-center mt-5 navbar_section">
+    <nav class="navbar relative inline-flex gap-5 rounded-full border-2 border-orange-500 items-center md:justify-center p-3" aria-label="Main navigation">
+      <a href="index.html" class="shrink-0">
+        <img src="images/l1.png" alt="WellLife logo" class="h-10 w-10 object-contain">
       </a>
-
-     <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
-
-      <ul id="main_navigation" class="navbar_links">
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link active_link" href="glowfit-workout-library.html">Workout</a></li>
-<<<<<<< HEAD
-        <li><a class="nav-link" href="/meal-page/meal.html">Nutrition</a></li>
-=======
-        <li><a class="nav-link" href="meal-page/meal.html">Nutrition</a></li>
->>>>>>> ced2600cbb39d43df7a80cb48d75bfbd00cf50d9
-        <li><a class="nav-link" href="quiz.html">Quiz</a></li>
-        <li><a class="nav-link" href="progress.html">Progress</a></li>
-        <li><a class="nav-link" href="community.html">Community</a></li>
+      <h1 class="heading">Glow<span class="heading__1">Fit</span></h1>
+      <ul id="main_navigation" class="hidden md:flex gap-5 items-center navbar_links">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="glowfit-workout-library.html"><li class="nav-link">Workout</li></a>
+        <a href="./meal-page/meal.html"><li class="nav-link">Nutrition</li></a>
+        <a href="quiz.html"><li class="nav-link">Quiz</li></a>
+        <a href="progress.html"><li class="nav-link">Progress</li></a>
+        <a href="community.html"><li class="nav-link">Community</li></a>
       </ul>
-
       <button id="header_search_button" class="navbar_icon_button" type="button" aria-label="Search workouts">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <i class="nav-link fa-solid fa-magnifying-glass" aria-hidden="true"></i>
       </button>
-
-      <span class="navbar_icon" role="img" aria-label="Profile">
-        <i class="fa-solid fa-user" aria-hidden="true"></i>
-      </span>
-
+      <a class="navbar_icon" href="login.html" aria-label="Profile"><i class="nav-link1 fa-solid fa-user"></i></a>
       <button id="menuBtn" class="menu_button" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="30" height="30" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
