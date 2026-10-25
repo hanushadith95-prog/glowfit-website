@@ -24,6 +24,17 @@ body {
     background-color: #f97316;
     color: white;
 }
+.nav-link1 {
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    padding: 4px 8px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link1:hover {
+    border-color: #f97316;
+    background-color: #f97316;
+    color: white;
+}
 .heroSection{
     margin: 40px auto;
     position: relative;
@@ -398,13 +409,19 @@ body {
      width: 100%;
  }
  .title{
-     margin: 4%;
+     top: 20%;
+     margin: 2%;
  }
  .heroSection__heading{
      font-size: 20px;
  }
- .title p,.btn{
+ .title p{
      font-size: x-small;
+ }
+ .title .btn{
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 10px;
  }
  .hero__content{
     display: none;
@@ -452,6 +469,11 @@ body {
 .tip__note p{
     font-size: 10px;
     color: #304332;
+}
+.tip__content .btn{
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 10px;
 }
 .icon__container{
     display: flex;
@@ -506,6 +528,11 @@ body {
     border-radius: 12px;
     margin: 0 auto 20px;
     font-size: 14px;
+}
+.form__bg .btn{
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 10px;
 }
 .energylevel{
     width: 100%;
@@ -603,6 +630,7 @@ body {
     width: 100%;
 }
 .faq{
+    width: 100%;
     margin: 0;
 }
 .faq p{
@@ -636,9 +664,6 @@ body {
 .foot__heading{
     color: #f97316;
 }
-.foot__heading1{
-    color: #304332;
-}
 .footer .foot__heading,.foot__heading1{
     font-size: xx-large;
     font-weight: bold;
@@ -651,5 +676,10 @@ body {
     font-size: 6px;
     align-items: center;
     gap: 8px;
+}
+.plan{
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 }
