@@ -18,7 +18,7 @@
     <script src="index.js" defer></script>
 </head>
 
-<body class="overflow-x-hidden">
+<body>
     <section class="flex justify-center mt-5">
         <!--Navbar-->
         <nav
@@ -154,32 +154,40 @@
         </div>
         <div class="wellnessTip">
             <div class="tip">
-                <div class="tip__img">
-                    <img src="./images/hydrate.jpg">
+              <div class="tip__img">
+                <img id="tipImage" src="./images/hydrate.jpg" alt="Water bottle with lemon and mint">
+              </div>
+              <div class="tip__content" aria-live="polite">
+                <div style="background-color: #d4ddc0;"
+                class="inline-flex gap-2 rounded-3xl bg-green-200 items-center px-3 py-1">
+                <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
                 </div>
-                <div class="tip__content">
-                    <div style="background-color: #d4ddc0;"
-                        class="inline-flex gap-2 rounded-3xl bg-green-200 items-center px-3 py-1">
-                        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                            </svg>
-                        </div>
-                        <p class="font-bold">TODAY'S TIP</p>
-                    </div>
-                    <h2>Stay Hydrated</h2>
-                    <p>Water boosts your energy, improves focus,
-                        help digestion and keep your skin healthy. Try to drink atleast 8 glass of water today</p>
-                    <div class="tip__note"><i style="color: #f97316;" class="fa-solid fa-droplet"></i>
-                        <p>Small Sips. Big Benefits</p> <i style="color: #f97316;" class="fa-solid fa-heart"></i>
-                    </div>
-                    <a href="./meal-page/meal.html" class="btn inline-flex items-center gap-2 w-fit">
-                        Explore Nutrition <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+                <p class="font-bold">TODAY'S TIP</p>
             </div>
-        </div>
+                <h2 id="tipTitle">Stay Hydrated</h2>
+                <p id="tipText">Water boosts your energy, improves focus, helps digestion and keeps your skin healthy. Try to drink at least 8 glasses of water today.</p>
+          
+                <div class="tip__note">
+                  <i id="tipIcon" style="color:#f97316;" class="fa-solid fa-droplet"></i>
+                  <p id="tipNote">Small Sips. Big Benefits</p>
+                </div>
+          
+                <div class="flex flex-wrap items-center gap-3 mt-4">
+                  <a id="tipLink" href="./meal-page/meal.html" class="btn inline-flex items-center gap-2 w-fit">
+                    <span id="tipLinkText">Explore Nutrition</span> <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                  <button id="nextTipBtn" type="button" class="btn btn-outline inline-flex items-center gap-2 w-fit">
+                    Next Tip <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="tipDots" class="flex justify-center gap-2 mt-6" aria-label="Tip position"></div>
+          </div>
         <div class="icon__container">
             <div class="icons__container__content">
                 <div class="icons">

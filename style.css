@@ -179,6 +179,30 @@ body {
     font-size: 26px;
     color: #304332;
 }
+.btn {
+    border: 2px solid var(--orange);
+}
+.btn-outline {
+    background-color: transparent;
+    color: #f97316;
+    border: 2px solid #f97316;
+}
+.btn-outline:hover {
+    background-color: #FFEFDA;
+}
+#tipDots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 9999px;
+    background-color: #d9dec8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#tipDots button.active {
+    background-color: #f97316;
+}
 .icon__container{
     display: flex;
     gap: 15%;
